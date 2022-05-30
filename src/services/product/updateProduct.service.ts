@@ -10,7 +10,6 @@ const updateProductService = async ({
   img_url,
   type,
   quantity_stock,
-  rating,
   label,
   description
 }: IProduct): Promise<Product> => {
@@ -33,7 +32,6 @@ const updateProductService = async ({
   quantity_stock
     ? (product.quantity_stock = quantity_stock)
     : product.quantity_stock;
-  rating ? (product.rating = rating) : product.rating;
   label ? (product.label = label) : product.label;
   description ? product.description = description  : product.description
   
