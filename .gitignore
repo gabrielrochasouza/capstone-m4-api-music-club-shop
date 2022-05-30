@@ -5,3 +5,4 @@ dist
 yarn.lock
 /yarn.lock
 jest.config.ts
+src/__test__
