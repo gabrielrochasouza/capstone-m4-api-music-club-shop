@@ -20,15 +20,15 @@ const userCreateController = async (req: Request, res: Response) => {
       });
       return res.status(201).send(instanceToPlain(newUser));
     } else {
-      const { name, email, user_name, birth_date, password, tel,is_adm } = req.body;
+      const { name, email, user_name, birth_date, password, tel } = req.body;
       const newUser = await userCreateService({
         name,
         email,
         user_name,
         birth_date,
         password,
-        tel,
-        is_adm
+        tel
+        
       });
       return res.status(201).send(instanceToPlain(newUser));
     }
