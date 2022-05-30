@@ -54,7 +54,7 @@ const addCartService = async ({ userId, productId }: IAddCart) => {
         cartId: cart.id,
         product: productToAdd,
       });
-      cart.subtotal = productAdded.product.price;
+      cart.subtotal += productAdded.product.price;
       await cartRepository.save(cart);
       await cartProductRepository.save(productAdded);
 
